@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alumni | CVRCE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      /* Apply fade-in animation to elements */
+      .topbar, .top, .Info {
+        animation: fadeIn 3s ease-in-out;
+      }
+
+      /* Add transition for smoother effect */
+      .topbar, .top, .Info {
+        transition: opacity 0.5s ease-in-out;
+      }
+      
+      @keyframes moveUp {
+        from { transform: translateY(0); }
+        to { transform: translateY(-500px); }
+      }
+
+      .graduate-cap {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateX(-50%);
+        animation: moveUp 2s ease-in-out;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="topbar">
+        <h1 class="light-300" style="background-color: black">
+          Alumni &nbsp; Association
+        </h1>
+        <img src="../images/cvrlogo.jpg" alt="cvrlogo" width="8%" height="20%" />
+
+        <div class="navbar">
+            <ul>
+              <div class="dropdown">
+                <p><span class="dropbtn">Home</span></p>
+                <div class="dropdown-content">
+                  <a href="index.html">Home</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">About</button>
+                <div class="dropdown-content">
+                  <a href="About.html">About us</a>
+                  <a href="OurTeam.html">Our Team</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Alumni &nbsp;Interaction</button>
+                <div class="dropdown-content">
+                  <a href="AlumniInteraction.html"> Former Scholars</a>
+                  <a href="MOu.html">MoU</a>
+                  <a href="TechTalks.html">Tech sphere</a>
+                  <a href="Expo.html">Expo</a>
+                  <a href="CampusDrives.html">CampusDrives</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Gallery</button>
+                <div class="dropdown-content">
+                  <a href="Gallery.html">Gallery</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Alumni Club</button>
+                <div class="dropdown-content">
+                  <a href="AluminiClub.html">Alumni Club</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Gatherings</button>
+                <div class="dropdown-content">
+                  <a href="Overseas.html">Overseas</a>
+                  <a href="Oncampus.html">On Campus</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Wall of Frames</button>
+                <div class="dropdown-content">
+                  <a href="Wallofframes.html">Wall Of Frames</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Alumni Awards</button>
+                <div class="dropdown-content">
+                  <a href="AlumniAwards.html">Alumni Awards</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Login</button>
+                <div class="dropdown-content">
+                  <a href="admin_login.html">Login(Admin)</a>
+                  <a href="admin_registration.html">NewAdmin</a>
+                  <a href="alumni_registration.html">NewStaff(Alumni)</a>
+                  <a href="alumni_login.html">Login(Alumni)</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Contacts</button>
+                <div class="dropdown-content">
+                  <a href="Contacts.html">Contacts</a>
+                </div>
+              </div>
+            </ul>
+        </div>
+      </div>
+
+      <div class="top">
+        <img src="../images/img9.jpg" alt="backgroundimg" width="100%" />
+      </div>
+      
+      <div class="Info">
+        <h3 id="title">Welcome to Our Alumni Association! <br></h3>
+        <h3>Dear Alumni, Friends, and Visitors,</h3>
+        <h3>Welcome to the official website of our Alumni Association! We are thrilled to have you here as part of our vibrant community</h3>
+      </div>
+    </div>
+</body>
+</html>

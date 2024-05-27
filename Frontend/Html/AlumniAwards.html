@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alumni | CVRCE</title>
+    <link rel="stylesheet" href="style.css" />  
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            overflow: hidden;
+             
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%; /* Adjusted width to hold 4 images */
+        }
+
+        .slides img {
+            width: 100%;
+            flex: 1 0 100%;
+            border-radius: 8px;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .nav-button.prev {
+            left: 0;
+        }
+
+        .nav-button.next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="topbar">
+        <h1 class="light-300" style="background-color: black">
+          Alumni &nbsp; Association
+        </h1>
+        <img src="../images/cvrlogo.jpg" alt="cvrlogo" width="8%" height="20%" />
+
+        <div class="navbar">
+            <ul>
+              <div class="dropdown">
+                <p><span class="dropbtn">Home</span></p>
+                <div class="dropdown-content">
+                  <a href="index.html">Home</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">About</button>
+                <div class="dropdown-content">
+                  <a href="About.html">About us</a>
+                  <a href="OurTeam.html">Our Team</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Alumni &nbsp;Interaction</button>
+                <div class="dropdown-content">
+                  <a href="AlumniInteraction.html"> Former Scholars</a>
+                  <a href="MOu.html">MoU</a>
+                  <a href="TechTalks.html">Tech sphere</a>
+                  <a href="Expo.html">Expo</a>
+                  <a href="CampusDrives.html">CampusDrives</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Gallery</button>
+                <div class="dropdown-content">
+                  <a href="Gallery.html">Gallery</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Alumni Club</button>
+                <div class="dropdown-content">
+                  <a href="AlumniClub.html">Alumni Club</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Gatherings</button>
+                <div class="dropdown-content">
+                  <a href="Overseas.html">Overseas</a>
+                  <a href="Oncampus.html">On Campus</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Wall of Frames</button>
+                <div class="dropdown-content">
+                  <a href="Wallofframes.html">Wall Of Frames</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Alumni Awards</button>
+                <div class="dropdown-content">
+                  <a href="AlumniAwards.html">Alumni Awards</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Login</button>
+                <div class="dropdown-content">
+                  <a href="admin_login.html">Login(Admin)</a>
+                  <a href="admin_registration.html">NewAdmin</a>
+                  <a href="alumni_registration.html">NewStaff(Alumni)</a>
+                  <a href="alumni_login.html">Login(Alumni)</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Contacts</button>
+                <div class="dropdown-content">
+                  <a href="Contacts.html">Contacts</a>
+                </div>
+              </div>
+            </ul>
+        </div>
+      </div>
+      
+      <div class="slider-container">
+        <h2 style="text-align: center;color: rgb(55, 139, 234);text-shadow: 1px 2px 1px;text-decoration: dashed;">Alumni Awards</i></h2>
+        <button class="nav-button prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="slides">
+          <img src="../images/chakri1.png" alt="img1" />
+          <img src="../images/nameplatesfi.png" alt="img2" />
+          <img src="../images/sankalpkunal.png" alt="img3" />
+          <img src="../images/three.png" alt="img4" />
+        </div>
+        <button class="nav-button next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </div>
+    <script src="../JS/index.js"></script>
+</body>
+</html>
