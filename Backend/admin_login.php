@@ -1,42 +1,40 @@
 <?php
+<?php
 session_start();
+include("connection.php");
+include("function.php");
 
-// Database connection
-$servername = "localhost";
-$username = "your_username";
-$password = "your_password";
-$dbname = "alumni_management";
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+    // Validate input
+    if (!empty($email) && !empty($password) && !is_numeric($email)) {
+        // Hash the password for security
+        $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+        // Use a prepared statement to prevent SQL injection
+        $stmt = $con->prepare("INSERT INTO admintable (email, password) VALUES (?, ?)");
+        $stmt->bind_param("ss", $email, $password_hashed);
 
-// Get data from the form
-$email = $_POST['email'];
-$password = $_POST['password'];
+        // Execute the statement
+        if ($stmt->execute()) {
+            // Redirect to the login page
+            header("Location: ../Frontend/Html/Admin/admin_login.html");
+            exit();
+        } else {
+            echo "Error: " . $stmt->error;
+        }
 
-// Fetch the user from the database
-$sql = "SELECT * FROM admin WHERE email='$email'";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    // Verify the password
-    if (password_verify($password, $row['password'])) {
-        $_SESSION['admin_id'] = $row['id'];
-        $_SESSION['admin_name'] = $row['name'];
-        echo "Login successful!";
-        // Redirect to a dashboard or other page
-        header("Location: admin_dashboard.php");
+        // Close the statement
+        $stmt->close();
     } else {
-        echo "Invalid password.";
+        echo "Please enter some valid information.";
     }
-} else {
-    echo "No user found with this email.";
 }
+?>
 
-$conn->close();
+
+
+
 ?>
